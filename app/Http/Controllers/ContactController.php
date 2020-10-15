@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use phpDocumentor\Reflection\Types\Context;
 
 class ContactController extends Controller
 {
@@ -86,8 +85,8 @@ class ContactController extends Controller
     }
     }
 
-    public function search($telephone){
-       $contact = DB::table('contacts')->where('telephone',$telephone)->get();
+    public function search($contact){
+       $contact = DB::table('contacts')->where('telephone',$contact)->get();
         if ($contact){
             return $contact;
         }elseif (!$contact){

@@ -1,9 +1,8 @@
 <?php
 
-use App\Contact;
 use Illuminate\Database\Seeder;
-
-class ContactTableSeeder extends Seeder
+use App\Post;
+class PostTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +11,6 @@ class ContactTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Contact::class, 100)->create();
+        factory(Post::class, 20)->create();
     }
 }

@@ -18,4 +18,6 @@ use Illuminate\Http\Request;
 // });
 
 Route::apiResource('contact','ContactController');
-Route::get('contact/{telephone}','ContactController@search')->name('contact.searchByTelephone');
+/*Route::get('contact/{contact}','ContactController@search')->name('contact.searchByTelephone');*/
+Route::apiResource('post','PostController');
+Route::apiResource('comment','CommentController');
